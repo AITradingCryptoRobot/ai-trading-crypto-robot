@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Trading Crypto Robot - AI-assisted crypto market tools and paper trading.">
+<title>AI Trading Crypto Robot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b12;--panel:#111827;--panel2:#151e2d;--gold:#e9b949;--gold2:#f7d47a;--text:#f4f5f7;--muted:#99a4b5;--line:#273247;--green:#29c78b;--red:#ff647c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}button,input,select{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}.shell{max-width:1280px;margin:auto;padding:0 24px}.top{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#090d16;position:sticky;top:0;z-index:10}.brand{font:700 20px "Space Grotesk";color:var(--gold)}.brand span{color:white}.nav{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}.nav a:hover{color:var(--gold)}.btn{border:0;border-radius:8px;background:var(--gold);color:#15120a;padding:11px 17px;font-weight:700}.btn:hover{background:var(--gold2)}.btn.secondary{background:#202b3d;color:#fff;border:1px solid var(--line)}.btn.danger{background:#49202b;color:#ffb3c0}.hero{padding:70px 0 45px;background:radial-gradient(ellipse at 80% 0%,#26334b 0,transparent 48%)}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase}.hero h1{font:700 clamp(36px,5vw,60px)/1.08 "Space Grotesk";max-width:760px;margin:14px 0}.hero p,.muted{color:var(--muted);line-height:1.7}.hero p{max-width:650px}.hero-actions{display:flex;gap:12px;margin-top:25px;flex-wrap:wrap}.section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.section-head h2{font:600 23px "Space Grotesk";margin:0}.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,1fr)}.two{grid-template-columns:1.4fr 1fr}.panel,.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}.stat small,.label{color:var(--muted);font-size:12px}.stat strong{display:block;font:600 26px "Space Grotesk";margin-top:8px}.gold{color:var(--gold)}.positive{color:var(--green)}.negative{color:var(--red)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px}th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted);font-weight:500}td{font-weight:600}.coin{font-weight:700}.pill{display:inline-block;padding:5px 9px;border-radius:30px;background:#263345;color:var(--gold);font-size:11px}.pill.green{color:var(--green);background:#12352d}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.toolbar select,.field{background:#0b111d;border:1px solid var(--line);color:white;border-radius:8px;padding:11px}.chartbox{height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted);background:linear-gradient(180deg,#172235,#101725);border-radius:10px;overflow:hidden}.chartbox canvas{width:100%;height:100%}.auth-wrap{max-width:450px;margin:55px auto}.auth-wrap h2{font:600 27px "Space Grotesk"}.form{display:grid;gap:12px}.form input{width:100%}.hidden{display:none!important}.notice{border:1px solid #6b5426;background:#292313;color:#f6d98d;padding:12px 14px;border-radius:9px;font-size:12px;line-height:1.6}.error{color:#ff9baa;font-size:13px}.success{color:var(--green);font-size:13px}.footer{border-top:1px solid var(--line);margin-top:50px;padding:28px 0;color:var(--muted);font-size:12px;line-height:1.7}.modal-bg{position:fixed;inset:0;background:#000b;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:25px;width:min(430px,100%)}.modal h3{margin-top:0;font-family:"Space Grotesk"}.right{display:flex;gap:10px;align-items:center}.mobile-menu{display:none}
+@media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.nav{gap:10px}.nav a:not(.btn){display:none}}
+@media(max-width:520px){.shell{padding:0 15px}.stats{grid-template-columns:1fr 1fr}.stat{padding:14px}.stat strong{font-size:20px}.hero{padding:45px 0 25px}.top{height:65px}.brand{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell" style="display:flex;width:100%;align-items:center;justify-content:space-between">
+<a class="brand" href="#">AI <span>TRADING CRYPTO ROBOT</span></a>
+<div class="nav"><a href="#markets">Markets</a><a href="#dashboard">Dashboard</a><a href="#risk">Risk</a><button class="btn" id="authNav">Sign in</button></div>
+</div></header>
+<main class="shell">
+<section class="hero" id="home">
+<div class="eyebrow">AI-assisted market tools · Binance market data</div>
+<h1>Trade with a clearer view of the <span class="gold">crypto market.</span></h1>
+<p>Explore market data, configurable strategy signals and automated paper trading in one workspace. Start in simulation mode before considering any live trading.</p>
+<div class="hero-actions"><button class="btn" id="heroStart">Open dashboard</button><a class="btn secondary" href="#markets">Explore markets</a></div>
+</section>
+<div class="notice">SIMULATION FIRST: This starter platform uses live public Binance market data, but the bot only records simulated paper trades. It does not place real exchange orders or promise returns.</div>
+
+<section class="section" id="markets">
+<div class="section-head"><h2>Market overview</h2><span class="label" id="marketUpdated">Connecting to Binance…</span></div>
+<div class="panel table-wrap"><table><thead><tr><th>Asset</th><th>Pair</th><th>Last price (USDT)</th><th>24h change</th><th>24h volume</th></tr></thead><tbody id="marketRows"><tr><td colspan="5" class="muted">Loading public market data…</td></tr></tbody></table></div>
+</section>
+
+<section class="section hidden" id="dashboard">
+<div class="section-head"><div><div class="eyebrow">Customer workspace</div><h2>Your trading dashboard</h2></div><div class="right"><span class="pill">PAPER MODE</span><button class="btn secondary" id="logoutBtn">Sign out</button></div></div>
+<div class="grid stats">
+<div class="stat"><small>Mode</small><strong class="gold">Simulation</strong></div>
+<div class="stat"><small>Paper trades (latest 50)</small><strong id="tradeCount">0</strong></div>
+<div class="stat"><small>Paper buy value</small><strong id="buyValue">$0.00</strong></div>
+<div class="stat"><small>Paper sell value</small><strong id="sellValue">$0.00</strong></div>
+</div>
+<div class="grid two" style="margin-top:16px">
+<div class="panel">
+<div class="section-head"><h2>Bot control</h2><span id="botStatus" class="pill">STOPPED</span></div>
+<p class="muted">Select a market and run the demo strategy. It evaluates a simple moving-average crossover on public candle data. It is educational, not a predictive AI model.</p>
+<div class="toolbar"><select id="botSymbol"><option>BTCUSDT</option><option>ETHUSDT</option><option>BNBUSDT</option><option>SOLUSDT</option><option>XRPUSDT</option><option>ADAUSDT</option><option>DOGEUSDT</option></select><button class="btn" id="startBot">Start paper bot</button><button class="btn danger" id="stopBot">Stop</button></div>
+<p class="label" id="botMessage" style="margin-top:13px">Bot is stopped.</p>
+</div>
+<div class="panel">
+<h2 style="font:600 18px 'Space Grotesk';margin-top:0">Strategy snapshot</h2>
+<div class="chartbox"><canvas id="priceChart" width="600" height="220"></canvas></div>
+<p class="label">Recent 1-hour BTC candles · indicative display</p>
+</div>
+</div>
+<div class="panel" style="margin-top:16px">
+<div class="section-head"><h2>Paper trade history</h2><span class="label">Latest 50 records</span></div>
+<div class="table-wrap"><table><thead><tr><th>Time</th><th>Pair</th><th>Side</th><th>Quantity</th><th>Price</th><th>Quote value</th></tr></thead><tbody id="tradeRows"><tr><td colspan="6" class="muted">No simulated trades yet.</td></tr></tbody></table></div>
+</div>
+<div class="panel hidden" id="adminPanel" style="margin-top:16px">
+<div class="section-head"><h2>Admin overview</h2><span class="pill">ADMIN</span></div>
+<div id="adminStats" class="muted">Loading admin data…</div>
+<div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Created</th></tr></thead><tbody id="adminRows"></tbody></table></div>
+</div>
+</section>
+
+<section class="section" id="risk">
+<div class="panel">
+<h2 style="font:600 20px 'Space Grotesk'">Risk & security notice</h2>
+<p class="muted">Cryptocurrency trading is high risk. You can lose all funds allocated to trading. AI-generated or rule-based signals can be wrong, and historical results do not predict future performance. This demo does not execute real trades, provide investment advice, hold customer funds, or guarantee profits.</p>
+<p class="muted">Never share exchange passwords, seed phrases or private keys. If exchange trading is added later, use restricted API keys with withdrawals disabled, store secrets only on the server, and complete security, legal and regulatory reviews before launch.</p>
+</div>
+</section>
+<div class="footer">© <span id="year"></span> AI Trading Crypto Robot · aitradingcryptorobot@gmail.com · +1 601 436 6665 · No. 1234, New York, United States<br>Market data is provided by Binance public endpoints and may be delayed or unavailable. This software is provided as a starter project, without warranties.</div>
+</main>
+
+<div class="modal-bg hidden" id="authModal">
+<div class="modal">
+<div class="right" style="justify-content:space-between"><h3 id="authTitle">Sign in</h3><button class="btn secondary" id="closeAuth">✕</button></div>
+<div class="toolbar" style="margin-bottom:16px"><button class="btn secondary" id="showLogin">Sign in</button><button class="btn secondary" id="showRegister">Create account</button></div>
+<form class="form" id="authForm">
+<input class="field hidden" id="authName" placeholder="Full name" autocomplete="name">
+<input class="field" id="authEmail" type="email" placeholder="Email address" required autocomplete="email">
+<input class="field" id="authPassword" type="password" placeholder="Password (12+ characters)" required autocomplete="current-password">
+<button class="btn" id="authSubmit">Sign in</button><div id="authFeedback" class="error"></div>
+</form>
+<p class="label">Use a unique password. Account sessions are stored in an HTTP-only cookie.</p>
+</div></div>
+<script src="/app.js" defer></script>
+</body></html>
